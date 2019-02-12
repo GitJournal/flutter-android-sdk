@@ -1,11 +1,11 @@
 FROM openjdk:8-slim
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    curl \
-    git \
-    lib32stdc++6 \
-    libglu1-mesa \
+  apt-get install -y --no-install-recommends \
+  curl \
+  git \
+  lib32stdc++6 \
+  libglu1-mesa \
   && rm -rf /var/lib/apt/lists/*
 
 # RUN locale-gen en_US.UTF-8
@@ -41,3 +41,11 @@ RUN mkdir -p ${FLUTTER_HOME} && \
   rm -rf /tmp/flutter.tar.xz
 
 ENV PATH=$PATH:$FLUTTER_HOME/bin
+
+# Fastlane
+RUN apt-get update && \
+  apt-get install -y --no-install-recommends \
+  ruby ruby-dev build-essential \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN gem install fastlane
