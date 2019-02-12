@@ -53,12 +53,6 @@ ENV ANDROID_NDK_HOME ${ANDROID_HOME}/android-ndk-${ANDROID_NDK_VERSION}
 ENV PATH ${ANDROID_NDK_HOME}:$PATH
 RUN chmod u+x ${ANDROID_NDK_HOME}/ -R
 
-# CMake
-RUN wget -q https://dl.google.com/android/repository/cmake-3.6.3155560-linux-x86_64.zip -O android-cmake.zip
-RUN unzip -q android-cmake.zip -d ${ANDROID_HOME}/cmake
-ENV PATH ${PATH}:${ANDROID_HOME}/cmake/bin
-RUN chmod u+x ${ANDROID_HOME}/cmake/bin/ -R
-
 # Fastlane
 RUN apt-get update && \
   apt-get install -y --no-install-recommends \
