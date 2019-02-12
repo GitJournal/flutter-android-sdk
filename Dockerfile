@@ -28,7 +28,7 @@ RUN curl -L http://dl.google.com/android/repository/sdk-tools-linux-${SDK_TOOLS}
 # Install SDK Packages
 RUN mkdir -p /root/.android/ && touch /root/.android/repositories.cfg && \
   yes | ${ANDROID_HOME}/tools/bin/sdkmanager "--licenses" && \
-  ${ANDROID_HOME}/tools/bin/sdkmanager "--update" && \
+  ${ANDROID_HOME}/tools/bin/sdkmanager "--update" "--verbose" && \
   ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;${BUILD_TOOLS}" "platform-tools" "platforms;android-${TARGET_SDK}" "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository"
 
 # Install flutter
