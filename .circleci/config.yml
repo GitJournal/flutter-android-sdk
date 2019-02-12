@@ -5,5 +5,5 @@ jobs:
     steps:
       - checkout
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build -t vHanda/flutter-android:latest .
-      - run: docker push vHanda/flutter-android:latest
+      - run: docker build -t vhanda/flutter-android:latest .
+      - run: docker push vhanda/flutter-android:latest
