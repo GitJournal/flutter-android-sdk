@@ -7,7 +7,7 @@ RUN apt-get update && \
   lib32stdc++6 \
   libglu1-mesa \
   wget \
-  ssh ssh-agent \
+  ssh \
   && rm -rf /var/lib/apt/lists/*
 
 # RUN locale-gen en_US.UTF-8
