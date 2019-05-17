@@ -45,7 +45,7 @@ RUN mkdir -p ${FLUTTER_HOME} && \
 ENV PATH=$PATH:$FLUTTER_HOME/bin
 
 # Android NDK
-ENV ANDROID_NDK_VERSION r19c
+ENV ANDROID_NDK_VERSION r19
 ENV ANDROID_NDK_URL http://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
 RUN curl -L "${ANDROID_NDK_URL}" -o android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip  \
   && unzip android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip -d ${ANDROID_HOME}  \
