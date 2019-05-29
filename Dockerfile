@@ -64,6 +64,6 @@ RUN apt-get update && \
 RUN gem install fastlane
 
 # gsutil
-RUN apt-get update && apt-get install gcc python-dev python-setuptools libffi-dev gnupg2 python-pip
+RUN apt-get update && apt-get install gcc python-dev python-setuptools libffi-dev gnupg2 python-pip unzip
 RUN pip install gsutil
 RUN pip install --upgrade google-auth-oauthli
