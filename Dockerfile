@@ -70,3 +70,8 @@ RUN gem install fastlane
 RUN apt-get update && apt-get install -y gcc python-dev python-setuptools libffi-dev gnupg2 python-pip
 RUN pip install gsutil
 RUN pip install --upgrade google-auth-oauthlib
+
+# Sentry
+RUN apt-get install -y npm
+RUN npm config set unsafe-perm true
+RUN npm install -g @sentry/cli
