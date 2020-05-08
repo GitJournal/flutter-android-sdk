@@ -38,7 +38,7 @@ RUN mkdir -p /root/.android/ && touch /root/.android/repositories.cfg && \
 
 # Install flutter
 ENV FLUTTER_HOME "/opt/flutter"
-ENV FLUTTER_URL "https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.17.0-stable.tar.xz"
+ENV FLUTTER_URL "https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_1.17.0-stable.tar.xz"
 RUN mkdir -p ${FLUTTER_HOME} && \
   curl -L ${FLUTTER_URL} -o /tmp/flutter.tar.xz --progress-bar && \
   tar xf /tmp/flutter.tar.xz -C /tmp && \
