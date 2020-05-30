@@ -11,3 +11,4 @@ URL="https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_
 curl --head $URL
 
 echo "ENV FLUTTER_URL \"$URL\""
+gsed -i -e "s%ENV FLUTTER_URL.*$%ENV FLUTTER_URL \"$URL\"%" Dockerfile
