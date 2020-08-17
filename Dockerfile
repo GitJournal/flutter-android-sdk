@@ -47,6 +47,8 @@ RUN mkdir -p ${FLUTTER_HOME} && \
   rm -rf /tmp/flutter.tar.xz
 
 ENV PATH=$PATH:$FLUTTER_HOME/bin
+ENV PATH=$PATH:$FLUTTER_HOME/bin/cache/dart-sdk/bin
+ENV PATH=$PATH:$HOME/.pub-cache/bin
 
 # Android NDK
 ENV ANDROID_NDK_VERSION r19
@@ -76,3 +78,6 @@ RUN pip install --upgrade google-auth-oauthlib
 RUN apt-get install -y npm
 RUN npm config set unsafe-perm true
 RUN npm install -g @sentry/cli
+
+# Flutter test results in junit format
+RUN flutter pub global activate junitreport
