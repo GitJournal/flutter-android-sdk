@@ -48,7 +48,7 @@ RUN mkdir -p ${FLUTTER_HOME} && \
 
 ENV PATH=$PATH:$FLUTTER_HOME/bin
 ENV PATH=$PATH:$FLUTTER_HOME/bin/cache/dart-sdk/bin
-ENV PATH=$PATH:$HOME/.pub-cache/bin
+ENV PATH=$PATH:$FLUTTER_HOME/.pub-cache/bin
 
 # Android NDK
 ENV ANDROID_NDK_VERSION r19
