@@ -11,6 +11,7 @@ RUN apt-get update && \
   unzip \
   ca-certificates \
   xz-utils \
+  lcov \
   && rm -rf /var/lib/apt/lists/*
 
 # RUN locale-gen en_US.UTF-8
