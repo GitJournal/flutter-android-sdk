@@ -67,8 +67,9 @@ RUN apt-get update && \
   ruby ruby-dev build-essential \
   && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundle
-RUN bundle update rake
+# fastlane depends on 0.6.0 which has a dependency bug
+# https://github.com/postmodern/digest-crc/issues/19
+RUN gem install digest-crc -v '0.6.1'
 RUN gem install fastlane
 
 # gsutil
