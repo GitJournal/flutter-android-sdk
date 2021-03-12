@@ -67,6 +67,7 @@ RUN apt-get update && \
   ruby ruby-dev build-essential \
   && rm -rf /var/lib/apt/lists/*
 
+RUN gem install bundle
 RUN bundle update rake
 RUN gem install fastlane
 
