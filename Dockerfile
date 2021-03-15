@@ -50,6 +50,9 @@ ENV PATH=$PATH:$FLUTTER_HOME/bin
 ENV PATH=$PATH:$FLUTTER_HOME/bin/cache/dart-sdk/bin
 ENV PATH=$PATH:$FLUTTER_HOME/.pub-cache/bin
 
+RUN flutter doctor && \
+  chown -R root:root ${FLUTTER_HOME}
+
 # Android NDK
 ENV ANDROID_NDK_VERSION r19
 ENV ANDROID_NDK_URL http://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
