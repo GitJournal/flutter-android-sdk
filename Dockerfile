@@ -87,3 +87,8 @@ RUN npm install -g @sentry/cli
 
 # Flutter test results in junit format
 RUN flutter pub global activate junitreport
+
+# Circle CI Debugging via SSH
+RUN mkdir -p /home/circleci
+RUN echo "#!/bin/bash\nexport PATH=/home/circleci/.local/bin:/home/circleci/bin:/opt/sbt/bin:/opt/apache-maven/bin:/opt/apache-ant/bin:/opt/gradle/bin:/usr/local/openjdk-14/bin:${PATH}" > /home/circleci/.bash_profile
+RUN chmod a+x /home/circleci/.bash_profile
