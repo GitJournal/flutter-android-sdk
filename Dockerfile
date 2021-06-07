@@ -92,3 +92,6 @@ RUN flutter pub global activate junitreport
 RUN mkdir -p /home/circleci
 RUN echo "#!/bin/bash\nexport PATH=/home/circleci/.local/bin:/home/circleci/bin:/opt/sbt/bin:/opt/apache-maven/bin:/opt/apache-ant/bin:/opt/gradle/bin:/usr/local/openjdk-14/bin:${PATH}" > /home/circleci/.bash_profile
 RUN chmod a+x /home/circleci/.bash_profile
+RUN mkdir -p /root
+RUN echo "#!/bin/bash\nexport PATH=/home/circleci/.local/bin:/home/circleci/bin:/opt/sbt/bin:/opt/apache-maven/bin:/opt/apache-ant/bin:/opt/gradle/bin:/usr/local/openjdk-14/bin:${PATH}" > /root/.bash_profile
+RUN chmod a+x /root/.bash_profile
